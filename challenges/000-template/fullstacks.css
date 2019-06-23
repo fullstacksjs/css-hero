@@ -1,0 +1,119 @@
+:root {
+  --c-yellow-tint: #ffc457;
+  --c-yellow: rgb(255, 195, 117);
+  --c-yellow-shade: rgb(255, 149, 100);
+  --c-yellow-shadow: rgba(255, 149, 100, .5);
+
+  --c-cyan-tint: #00cfc5;
+  --c-cyan: #67C8E4;
+  --c-cyan-shade: #0383be;
+
+  --c-dark-tint: #434C5E;
+  --c-dark: #3B4252;
+  --c-dark-shade: #2E3440;
+
+  --c-light-tint: #f6f6f8;
+  --c-light: #ECEFF4;
+  --c-light-shade: #D8DEE9;
+
+  --c-darker:   rgba(15, 17, 21, .08);
+  --c-darker-1: rgba(15, 17, 21, .2);
+  --c-darker-2: rgba(15, 17, 21, .4);
+  --c-darker-3: rgba(15, 17, 21, .6);
+
+  --c-lighter:   rgba(184, 194, 215, .2);
+  --c-lighter-1: rgba(184, 194, 215, .3);
+  --c-lighter-2: rgba(184, 194, 215, .4);
+  --c-lighter-3: rgba(184, 194, 215, .6);
+
+  --ff-ui: Rajdhani, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-ui);
+  margin: 0;
+}
+
+body:not(.light) {
+  --background-l0: var(--c-dark);
+  --background-l1: var(--c-dark-tint);
+  --foreground: var(--c-light);
+  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
+  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-darker-1);
+}
+
+body.light {
+  --background-l0: var(--c-light-shade);
+  --background-l1: var(--c-light);
+  --foreground: var(--c-dark);
+  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
+  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-yellow-shadow);
+}
+
+input:focus {
+  outline: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fullstacks {
+  background-color: var(--background-l0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 100px 40px 40px;
+  color: var(--foreground);
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  box-shadow: var(--bs-card-hover);
+  background-color: var(--background-l1);
+  transition: min-width 300ms;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  height: 80px;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--foreground);
+  opacity: .2;
+  height: 1px;
+}
+
+.logo h1 {
+  font-weight: 500;
+}
+
+.logo h2 {
+  opacity: .7;
+  font-weight: 400;
+}
