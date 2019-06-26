@@ -37,22 +37,6 @@ body {
   margin: 0;
 }
 
-body:not(.light) {
-  --background-l0: var(--c-dark);
-  --background-l1: var(--c-dark-tint);
-  --foreground: var(--c-light);
-  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
-  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-darker-1);
-}
-
-body.light {
-  --background-l0: var(--c-light-shade);
-  --background-l1: var(--c-light);
-  --foreground: var(--c-dark);
-  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
-  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-yellow-shadow);
-}
-
 input:focus {
   outline: unset;
 }
@@ -65,6 +49,22 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.fullstacks:not(.light) {
+  --background-l0: var(--c-dark);
+  --background-l1: var(--c-dark-tint);
+  --foreground: var(--c-light);
+  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
+  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-darker-1);
+}
+
+.fullstacks.light {
+  --background-l0: var(--c-light-shade);
+  --background-l1: var(--c-light);
+  --foreground: var(--c-dark);
+  --bs-card: 0 2px 2px var(--c-darker-2), 0 3px 6px var(--c-darker-1);
+  --bs-card-hover: 0 2px 4px var(--c-darker), 0 5px 10px var(--c-yellow-shadow);
 }
 
 .fullstacks {
