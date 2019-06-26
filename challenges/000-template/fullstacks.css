@@ -34,7 +34,6 @@
 }
 
 body {
-  font-family: var(--ff-ui);
   margin: 0;
 }
 
@@ -69,6 +68,7 @@ ul {
 }
 
 .fullstacks {
+  font-family: var(--ff-ui);
   background-color: var(--background-l0);
   width: 100%;
   height: 100vh;
