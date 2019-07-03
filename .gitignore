@@ -65,3 +65,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Renders (videos and gifs)
+renders/
